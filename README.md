@@ -28,6 +28,11 @@ MVVM application, packages are divided by features for ease of use.
 ## API
 * Prayer times : [Al Adhan](https://aladhan.com/prayer-times-api)
 
+## UI and UX inspirations
+* [Islamic app](https://www.behance.net/gallery/78695217/Islom-Namoz)
+* [Auto Silence Prayer App V2](https://dribbble.com/shots/11015094-Auto-Silence-Prayer-App-V2)
+* [Schedule-Ramadan Kareem App](https://dribbble.com/shots/17858034-Schedule-Ramadan-Kareem-App)
+
 ## How to use
 1. Ensure you have Android Studio and start it
 2. Select new project for VCS
