@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.alphaomardiallo.duwagol'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.alphaomardiallo.duwagol"
         minSdk 26
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
