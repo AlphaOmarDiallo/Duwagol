@@ -20,10 +20,10 @@ MVVM application, packages are divided by features for ease of use.
 ## Tech stack
 * Languages : Kotlin, XML
 * Dependency Injection : Hilt
-* Database : Room, DataStore
+* Database : Room, Preference dataStore
 * Navigation : Navigation
 * UI : Compose, Material 3
-* HTTP client : Retrofit, OkHTTP
+* HTTP client : Retrofit, OkHTTP, Moshi
 
 ## How to use
 1. Ensure you have Android Studio and start it
