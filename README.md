@@ -25,6 +25,9 @@ MVVM application, packages are divided by features for ease of use.
 * UI : Compose, Material 3
 * HTTP client : Retrofit, OkHTTP, Moshi
 
+## API
+* Prayer times : [Al Adhan](https://aladhan.com/prayer-times-api)
+
 ## How to use
 1. Ensure you have Android Studio and start it
 2. Select new project for VCS
