@@ -1,4 +1,4 @@
-package com.alphaomardiallo.duwagol.ui.theme
+package com.alphaomardiallo.duwagol.common.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

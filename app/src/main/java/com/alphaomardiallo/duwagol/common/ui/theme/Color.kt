@@ -1,4 +1,4 @@
-package com.alphaomardiallo.duwagol.ui.theme
+package com.alphaomardiallo.duwagol.common.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

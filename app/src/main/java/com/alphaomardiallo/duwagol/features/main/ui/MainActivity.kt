@@ -1,4 +1,4 @@
-package com.alphaomardiallo.duwagol
+package com.alphaomardiallo.duwagol.features.main.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,7 +8,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.alphaomardiallo.duwagol.ui.theme.DuwagolTheme
+import com.alphaomardiallo.duwagol.common.ui.theme.DuwagolTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +23,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 
 @Preview(showBackground = true)
 @Composable
