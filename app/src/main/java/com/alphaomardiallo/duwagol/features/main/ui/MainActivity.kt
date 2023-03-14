@@ -95,6 +95,6 @@ fun MainApp() {
 @Composable
 fun DefaultPreview() {
     DuwagolTheme {
-
+        MainApp()
     }
 }
