@@ -23,10 +23,12 @@ MVVM application, packages are divided by features for ease of use.
 * Database : Room, Preference dataStore
 * Navigation : Navigation
 * UI : Compose, Material 3
-* HTTP client : Retrofit, OkHTTP, Moshi
+* HTTP client : Retrofit, OkHTTP, Kotlin Serialization
 
 ## API
 * Prayer times : [Al Adhan](https://aladhan.com/prayer-times-api)
+* Geocoding : [Maps Geocoding API](https://developers.google.com/maps/documentation/geocoding)
+* Secret API keys : [Google Secret for Android]()
 
 ## UI and UX inspirations
 * [Islamic app](https://www.behance.net/gallery/78695217/Islom-Namoz)
