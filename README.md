@@ -30,6 +30,9 @@ MVVM application, packages are divided by features for ease of use.
 * Geocoding : [Maps Geocoding API](https://developers.google.com/maps/documentation/geocoding)
 * Secret API keys : [Google Secret for Android]()
 
+## Vector assets
+* SVG Repo : [Ramadan Mubarak](https://www.svgrepo.com/collection/ramadhan-mubarak/)
+
 ## UI and UX inspirations
 * [Islamic app](https://www.behance.net/gallery/78695217/Islom-Namoz)
 * [Auto Silence Prayer App V2](https://dribbble.com/shots/11015094-Auto-Silence-Prayer-App-V2)

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Duwagol</string>
+
+    <!-- Main navigation items -->
+    <string name="main_nav_item_home">Home</string>
+    <string name="main_nav_item_calendar">Home</string>
 </resources>
