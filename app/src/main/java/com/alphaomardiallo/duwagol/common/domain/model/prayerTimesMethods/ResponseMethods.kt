@@ -1,7 +1,10 @@
 package com.alphaomardiallo.duwagol.common.domain.model.prayerTimesMethods
 
-data class responseMethods(
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class ResponseMethods(
     val code: Int,
     val `data`: Data,
-    val status: String
+    val status: String,
 )

@@ -1,5 +1,8 @@
 package com.alphaomardiallo.duwagol.common.domain.model.prayerTimesMethods
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Data(
     val CUSTOM: CUSTOM,
     val DUBAI: DUBAI,
@@ -17,5 +20,5 @@ data class Data(
     val RUSSIA: RUSSIA,
     val SINGAPORE: SINGAPORE,
     val TEHRAN: TEHRAN,
-    val TURKEY: TURKEY
+    val TURKEY: TURKEY,
 )
