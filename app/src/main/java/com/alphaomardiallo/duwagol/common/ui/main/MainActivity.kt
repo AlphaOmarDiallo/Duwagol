@@ -1,10 +1,9 @@
-package com.alphaomardiallo.duwagol.features.main.ui
+package com.alphaomardiallo.duwagol.common.ui.main
 
-import MainNavigation
-import MainNavigationItems
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -21,11 +20,21 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.alphaomardiallo.duwagol.common.domain.navigation.MainNavigation
+import com.alphaomardiallo.duwagol.common.domain.navigation.MainNavigationItems
 import com.alphaomardiallo.duwagol.common.ui.theme.DuwagolTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    private val viewModel: MainViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        viewModel.fetchMethods()
+
         setContent {
             DuwagolTheme {
                 // A surface container using the 'background' color from the theme

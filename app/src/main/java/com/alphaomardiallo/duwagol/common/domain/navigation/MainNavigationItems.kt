@@ -1,3 +1,5 @@
+package com.alphaomardiallo.duwagol.common.domain.navigation
+
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import com.alphaomardiallo.duwagol.R
