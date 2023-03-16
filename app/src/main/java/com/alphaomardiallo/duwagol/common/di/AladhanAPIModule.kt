@@ -1,5 +1,6 @@
 package com.alphaomardiallo.duwagol.common.di
 
+import com.alphaomardiallo.duwagol.common.data.remote.prayerTimeCalendar.PrayerTimesCalendarWS
 import com.alphaomardiallo.duwagol.common.data.remote.prayerTimesMethods.PrayerTimesMethodsWS
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
@@ -42,6 +43,17 @@ class AladhanAPIModule {
             .addConverterFactory(converterFactory)
             .build()
             .create(PrayerTimesMethodsWS::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun providePrayerCalendar(): PrayerTimesCalendarWS {
+        return Retrofit.Builder()
+            .baseUrl(BASE_PLACES_URL)
+            .client(client)
+            .addConverterFactory(converterFactory)
+            .build()
+            .create(PrayerTimesCalendarWS::class.java)
     }
 
     companion object {
