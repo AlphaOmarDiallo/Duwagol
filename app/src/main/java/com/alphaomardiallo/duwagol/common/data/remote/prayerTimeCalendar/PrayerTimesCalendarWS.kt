@@ -4,6 +4,7 @@ import com.alphaomardiallo.duwagol.common.domain.model.prayerTimesCalendar.Respo
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
+import javax.annotation.Nullable
 
 /**
  * Web service to fetch prayer time for a location
@@ -16,7 +17,8 @@ interface PrayerTimesCalendarWS {
         @Query(LATITUDE) lat: Double,
         @Query(LONGITUDE) lng: Double,
         @Query(MONTH) month: Int,
-        @Query(METHOD) method: Int,
+        @Query(YEAR) year: Int,
+        @Nullable @Query(METHOD) method: Int?,
         @Query(SHAFAQ) shafaq: String,
         @Query(SCHOOL) school: String,
         @Query(MIDNHIGHT_MODE) midnightMode: Int,
@@ -27,6 +29,7 @@ interface PrayerTimesCalendarWS {
         const val LATITUDE = "latitude"
         const val LONGITUDE = "longitude"
         const val MONTH = "month"
+        const val YEAR = "year"
         const val METHOD = "method"
         const val SHAFAQ = "shafaq"
         const val SCHOOL = "school"
