@@ -1,11 +1,13 @@
 package com.alphaomardiallo.duwagol.common.di
 
+import com.alphaomardiallo.duwagol.common.data.remote.prayerTimeCalendar.PrayerTimesCalendarWS
 import com.alphaomardiallo.duwagol.common.data.remote.prayerTimesMethods.PrayerTimesMethodsWS
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
@@ -31,6 +33,7 @@ class AladhanAPIModule {
     }.build()
 
     private val contentType = "application/json".toMediaType()
+    @OptIn(ExperimentalSerializationApi::class)
     private val converterFactory = Json.asConverterFactory(contentType)
 
     @Singleton
@@ -44,8 +47,19 @@ class AladhanAPIModule {
             .create(PrayerTimesMethodsWS::class.java)
     }
 
+    @Singleton
+    @Provides
+    fun providePrayerCalendar(): PrayerTimesCalendarWS {
+        return Retrofit.Builder()
+            .baseUrl(BASE_PLACES_URL)
+            .client(client)
+            .addConverterFactory(converterFactory)
+            .build()
+            .create(PrayerTimesCalendarWS::class.java)
+    }
+
     companion object {
-        const val BASE_PLACES_URL = "http://api.aladhan.com/"
+        const val BASE_PLACES_URL = "https://api.aladhan.com/"
         const val DEFAULT_TIMEOUT = 10L
     }
 }

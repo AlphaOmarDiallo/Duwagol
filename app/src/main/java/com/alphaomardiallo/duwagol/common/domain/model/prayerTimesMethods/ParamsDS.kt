@@ -4,6 +4,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class ParamsDS(
-    val Fajr: Int,
+    val Fajr: Double,
     val Isha: String,
 )

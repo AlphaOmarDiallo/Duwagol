@@ -4,7 +4,16 @@ import com.alphaomardiallo.duwagol.common.domain.model.prayerTimesMethods.Respon
 import retrofit2.Response
 import retrofit2.http.GET
 
+/**
+ * Web service to fetch prayer time for a location
+ *
+ * [Link to the API](https://aladhan.com/prayer-times-api#GetMethods)
+ */
 interface PrayerTimesMethodsWS {
-    @GET("v1/methods")
+    @GET(URL)
     suspend fun getPrayerTimesCalculationMethods(): Response<ResponseMethods>
+
+    companion object {
+        const val URL = "v1/methods"
+    }
 }
