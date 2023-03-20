@@ -1,0 +1,100 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "09eeb9777e70a16cc6b3ddefa8abdbe1",
+    "entities": [
+      {
+        "tableName": "prayer_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timings_gregorian_date` TEXT NOT NULL, `timings_gregorian_date_format` TEXT NOT NULL, `timings_gregorian_day` TEXT NOT NULL, `timings_gregorian_month` TEXT NOT NULL, `timings_gregorian_year` TEXT NOT NULL, `timings_hijri_date` TEXT NOT NULL, `timings_hijri_date_format` TEXT NOT NULL, `timings_hijri_day` TEXT NOT NULL, `timings_hijri_month` TEXT NOT NULL, `timings_hijri_year` TEXT NOT NULL, `timings_list_timings` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gregorianDate",
+            "columnName": "timings_gregorian_date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gregorianDateFormat",
+            "columnName": "timings_gregorian_date_format",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gregorianDay",
+            "columnName": "timings_gregorian_day",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gregorianMonth",
+            "columnName": "timings_gregorian_month",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gregorianYear",
+            "columnName": "timings_gregorian_year",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hijriDate",
+            "columnName": "timings_hijri_date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hijriDateFormat",
+            "columnName": "timings_hijri_date_format",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hijriDay",
+            "columnName": "timings_hijri_day",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hijriMonth",
+            "columnName": "timings_hijri_month",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hijriYear",
+            "columnName": "timings_hijri_year",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "prayerList",
+            "columnName": "timings_list_timings",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '09eeb9777e70a16cc6b3ddefa8abdbe1')"
+    ]
+  }
+}

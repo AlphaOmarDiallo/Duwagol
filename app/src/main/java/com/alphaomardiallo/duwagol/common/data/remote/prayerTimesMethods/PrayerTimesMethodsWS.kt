@@ -1,6 +1,6 @@
 package com.alphaomardiallo.duwagol.common.data.remote.prayerTimesMethods
 
-import com.alphaomardiallo.duwagol.common.domain.model.prayerTimesMethods.ResponseMethods
+import com.alphaomardiallo.duwagol.common.data.model.prayerTimesMethods.ResponseMethods
 import retrofit2.Response
 import retrofit2.http.GET
 
@@ -11,7 +11,7 @@ import retrofit2.http.GET
  */
 interface PrayerTimesMethodsWS {
     @GET(URL)
-    suspend fun getPrayerTimesCalculationMethods(): Response<ResponseMethods>
+    suspend fun getPrayerTimesCalculationMethods(): Response<com.alphaomardiallo.duwagol.common.data.model.prayerTimesMethods.ResponseMethods>
 
     companion object {
         const val URL = "v1/methods"

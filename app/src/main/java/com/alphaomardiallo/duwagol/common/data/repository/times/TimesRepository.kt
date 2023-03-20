@@ -1,6 +1,6 @@
 package com.alphaomardiallo.duwagol.common.data.repository.times
 
-import com.alphaomardiallo.duwagol.common.domain.model.prayerTimesCalendar.ResponsePrayerTimeCalendar
+import com.alphaomardiallo.duwagol.common.data.model.prayerTimesCalendar.ResponsePrayerTimeCalendar
 import retrofit2.Response
 
 interface TimesRepository {
@@ -14,5 +14,5 @@ interface TimesRepository {
         shafaq: String,
         school: String,
         midnightMode: Int,
-    ): Response<ResponsePrayerTimeCalendar>
+    ): Response<com.alphaomardiallo.duwagol.common.data.model.prayerTimesCalendar.ResponsePrayerTimeCalendar>
 }

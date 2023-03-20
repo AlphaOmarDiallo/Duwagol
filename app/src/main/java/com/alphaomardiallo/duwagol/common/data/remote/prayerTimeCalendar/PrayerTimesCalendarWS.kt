@@ -1,6 +1,6 @@
 package com.alphaomardiallo.duwagol.common.data.remote.prayerTimeCalendar
 
-import com.alphaomardiallo.duwagol.common.domain.model.prayerTimesCalendar.ResponsePrayerTimeCalendar
+import com.alphaomardiallo.duwagol.common.data.model.prayerTimesCalendar.ResponsePrayerTimeCalendar
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -22,7 +22,7 @@ interface PrayerTimesCalendarWS {
         @Query(SHAFAQ) shafaq: String,
         @Query(SCHOOL) school: String,
         @Query(MIDNHIGHT_MODE) midnightMode: Int,
-    ): Response<ResponsePrayerTimeCalendar>
+    ): Response<com.alphaomardiallo.duwagol.common.data.model.prayerTimesCalendar.ResponsePrayerTimeCalendar>
 
     companion object {
         const val URL = "v1/calendar"
