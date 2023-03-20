@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class ParamsDDDS(
     val Fajr: Double,
-    val Isha: String,
+    val Isha: Double,
     val Maghrib: Double,
     val Midnight: String,
 )

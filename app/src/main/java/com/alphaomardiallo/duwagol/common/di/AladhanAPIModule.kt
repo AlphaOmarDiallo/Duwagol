@@ -7,6 +7,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
@@ -32,6 +33,7 @@ class AladhanAPIModule {
     }.build()
 
     private val contentType = "application/json".toMediaType()
+    @OptIn(ExperimentalSerializationApi::class)
     private val converterFactory = Json.asConverterFactory(contentType)
 
     @Singleton
@@ -57,7 +59,7 @@ class AladhanAPIModule {
     }
 
     companion object {
-        const val BASE_PLACES_URL = "http://api.aladhan.com/"
+        const val BASE_PLACES_URL = "https://api.aladhan.com/"
         const val DEFAULT_TIMEOUT = 10L
     }
 }
