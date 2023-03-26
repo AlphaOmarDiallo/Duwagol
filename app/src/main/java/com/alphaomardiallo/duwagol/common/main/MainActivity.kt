@@ -1,4 +1,4 @@
-package com.alphaomardiallo.duwagol.common.ui.main
+package com.alphaomardiallo.duwagol.common.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

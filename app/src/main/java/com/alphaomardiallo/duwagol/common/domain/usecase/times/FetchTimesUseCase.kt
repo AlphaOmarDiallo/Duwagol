@@ -1,4 +1,4 @@
-package com.alphaomardiallo.duwagol.common.domain.usecase.timesUseCase
+package com.alphaomardiallo.duwagol.common.domain.usecase.times
 
 import com.alphaomardiallo.duwagol.common.domain.repository.TimesRepository
 import java.text.SimpleDateFormat
@@ -12,7 +12,7 @@ class FetchTimesUseCase @Inject constructor(private val timesRepository: TimesRe
         lng: Double = LONGITUDE_KAABA,
         month: Int = SimpleDateFormat("MM", Locale.getDefault()).format(Date()).toInt(),
         year: Int = SimpleDateFormat("yyyy", Locale.getDefault()).format(Date()).toInt(),
-        method: Int? = null,
+        method: Int? = 3,
         shafaq: String = SHAFAQ_GENERAL,
         school: String = SCHOOL,
         midnightMode: Int = MIDNIGHT_MODE,

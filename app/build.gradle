@@ -114,9 +114,12 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3"
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
 
-    //COROUTINES
+    // Coroutines
     def coroutines_version = "1.6.4"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+
+    // Timber
+    implementation 'com.jakewharton.timber:timber:5.0.1'
 }

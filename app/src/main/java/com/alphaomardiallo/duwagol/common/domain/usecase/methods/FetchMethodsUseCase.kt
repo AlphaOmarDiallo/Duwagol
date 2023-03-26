@@ -1,4 +1,4 @@
-package com.alphaomardiallo.duwagol.common.domain.usecase.methodsUseCase
+package com.alphaomardiallo.duwagol.common.domain.usecase.methods
 
 import com.alphaomardiallo.duwagol.common.domain.repository.MethodsRepository
 import javax.inject.Inject
