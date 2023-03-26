@@ -15,6 +15,9 @@ interface PrayerDao {
     @Update
     suspend fun updatePrayer(prayer: Prayer)
 
+    @Query("SELECT * FROM prayer_table")
+    fun getAllPrayers(): List<Prayer>
+
     @Query("DELETE FROM prayer_table")
     fun clearTable()
 }

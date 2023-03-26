@@ -1,7 +1,7 @@
-package com.alphaomardiallo.duwagol.common.data.repository.methods
+package com.alphaomardiallo.duwagol.common.data.repository
 
 import com.alphaomardiallo.duwagol.common.data.remote.prayerTimesMethods.PrayerTimesMethodsWS
-import com.alphaomardiallo.duwagol.common.data.model.prayerTimesMethods.ResponseMethods
+import com.alphaomardiallo.duwagol.common.domain.repository.MethodsRepository
 import retrofit2.Response
 import javax.inject.Inject
 

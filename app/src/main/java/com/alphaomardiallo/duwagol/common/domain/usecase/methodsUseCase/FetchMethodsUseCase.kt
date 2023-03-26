@@ -1,6 +1,6 @@
 package com.alphaomardiallo.duwagol.common.domain.usecase.methodsUseCase
 
-import com.alphaomardiallo.duwagol.common.data.repository.methods.MethodsRepository
+import com.alphaomardiallo.duwagol.common.domain.repository.MethodsRepository
 import javax.inject.Inject
 
 class FetchMethodsUseCase @Inject constructor(private val methodsRepository: MethodsRepository) {

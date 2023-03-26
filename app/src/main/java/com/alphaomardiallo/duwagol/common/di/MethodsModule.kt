@@ -1,8 +1,8 @@
 package com.alphaomardiallo.duwagol.common.di
 
 import com.alphaomardiallo.duwagol.common.data.remote.prayerTimesMethods.PrayerTimesMethodsWS
-import com.alphaomardiallo.duwagol.common.data.repository.methods.MethodsRepository
-import com.alphaomardiallo.duwagol.common.data.repository.methods.MethodsRepositoryImp
+import com.alphaomardiallo.duwagol.common.domain.repository.MethodsRepository
+import com.alphaomardiallo.duwagol.common.data.repository.MethodsRepositoryImp
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

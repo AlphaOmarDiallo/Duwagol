@@ -18,4 +18,5 @@ data class Prayer(
     @ColumnInfo(name = "timings_hijri_month") val hijriMonth: String,
     @ColumnInfo(name = "timings_hijri_year") val hijriYear: String,
     @ColumnInfo(name = "timings_list_timings") val prayerList: List<String>,
+    @ColumnInfo(name = "timings_method") val method: Int,
 )

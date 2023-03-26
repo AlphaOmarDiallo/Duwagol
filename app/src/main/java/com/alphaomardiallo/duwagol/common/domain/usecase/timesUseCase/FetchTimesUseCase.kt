@@ -1,6 +1,6 @@
 package com.alphaomardiallo.duwagol.common.domain.usecase.timesUseCase
 
-import com.alphaomardiallo.duwagol.common.data.repository.times.TimesRepository
+import com.alphaomardiallo.duwagol.common.domain.repository.TimesRepository
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject

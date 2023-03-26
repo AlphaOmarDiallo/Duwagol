@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "09eeb9777e70a16cc6b3ddefa8abdbe1",
+    "identityHash": "625657bd057eedc18a6b546057bb092a",
     "entities": [
       {
         "tableName": "prayer_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timings_gregorian_date` TEXT NOT NULL, `timings_gregorian_date_format` TEXT NOT NULL, `timings_gregorian_day` TEXT NOT NULL, `timings_gregorian_month` TEXT NOT NULL, `timings_gregorian_year` TEXT NOT NULL, `timings_hijri_date` TEXT NOT NULL, `timings_hijri_date_format` TEXT NOT NULL, `timings_hijri_day` TEXT NOT NULL, `timings_hijri_month` TEXT NOT NULL, `timings_hijri_year` TEXT NOT NULL, `timings_list_timings` TEXT NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timings_gregorian_date` TEXT NOT NULL, `timings_gregorian_date_format` TEXT NOT NULL, `timings_gregorian_day` TEXT NOT NULL, `timings_gregorian_month` TEXT NOT NULL, `timings_gregorian_year` TEXT NOT NULL, `timings_hijri_date` TEXT NOT NULL, `timings_hijri_date_format` TEXT NOT NULL, `timings_hijri_day` TEXT NOT NULL, `timings_hijri_month` TEXT NOT NULL, `timings_hijri_year` TEXT NOT NULL, `timings_list_timings` TEXT NOT NULL, `timings_method` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "id",
@@ -79,6 +79,12 @@
             "columnName": "timings_list_timings",
             "affinity": "TEXT",
             "notNull": true
+          },
+          {
+            "fieldPath": "method",
+            "columnName": "timings_method",
+            "affinity": "INTEGER",
+            "notNull": true
           }
         ],
         "primaryKey": {
@@ -94,7 +100,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '09eeb9777e70a16cc6b3ddefa8abdbe1')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '625657bd057eedc18a6b546057bb092a')"
     ]
   }
 }

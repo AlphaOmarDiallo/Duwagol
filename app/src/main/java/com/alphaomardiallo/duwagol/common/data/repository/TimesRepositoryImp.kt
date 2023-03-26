@@ -1,13 +1,13 @@
-package com.alphaomardiallo.duwagol.common.data.repository.times
+package com.alphaomardiallo.duwagol.common.data.repository
 
 import com.alphaomardiallo.duwagol.common.data.remote.prayerTimeCalendar.PrayerTimesCalendarWS
-import com.alphaomardiallo.duwagol.common.data.model.prayerTimesCalendar.ResponsePrayerTimeCalendar
+import com.alphaomardiallo.duwagol.common.domain.repository.TimesRepository
 import retrofit2.Response
 import javax.inject.Inject
 
 class TimesRepositoryImp @Inject constructor(
     private val prayerTimesCalendarWS: PrayerTimesCalendarWS
-) : TimesRepository{
+) : TimesRepository {
     override suspend fun fetchTimes(
         lat: Double,
         lng: Double,
