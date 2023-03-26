@@ -12,7 +12,7 @@ class FetchTimesUseCase @Inject constructor(private val timesRepository: TimesRe
         lng: Double = LONGITUDE_KAABA,
         month: Int = SimpleDateFormat("MM", Locale.getDefault()).format(Date()).toInt(),
         year: Int = SimpleDateFormat("yyyy", Locale.getDefault()).format(Date()).toInt(),
-        method: Int? = 3,
+        method: Int? = null,
         shafaq: String = SHAFAQ_GENERAL,
         school: String = SCHOOL,
         midnightMode: Int = MIDNIGHT_MODE,
