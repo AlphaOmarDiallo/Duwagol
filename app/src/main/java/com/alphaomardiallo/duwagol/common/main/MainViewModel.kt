@@ -2,8 +2,8 @@ package com.alphaomardiallo.duwagol.common.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.alphaomardiallo.duwagol.common.data.model.prayerTimesCalendar.Data
 import com.alphaomardiallo.duwagol.common.data.model.prayerTimesCalendar.toPrayer
+import com.alphaomardiallo.duwagol.common.domain.model.Prayer
 import com.alphaomardiallo.duwagol.common.domain.usecase.methods.FetchMethodsUseCase
 import com.alphaomardiallo.duwagol.common.domain.usecase.prayer.InsertPrayerUseCase
 import com.alphaomardiallo.duwagol.common.domain.usecase.times.FetchTimesUseCase
@@ -19,7 +19,7 @@ import timber.log.Timber
 class MainViewModel @Inject constructor(
     private val fetchMethodsUseCase: FetchMethodsUseCase,
     private val fetchTimesUseCase: FetchTimesUseCase,
-    private val insertPrayerUseCase: InsertPrayerUseCase
+    private val insertPrayerUseCase: InsertPrayerUseCase,
 ) : ViewModel() {
 
     fun fetchMethods() {
@@ -39,7 +39,7 @@ class MainViewModel @Inject constructor(
     }
 
     fun fetchTimes() {
-        viewModelScope.launch() {
+        viewModelScope.launch {
             try {
 
                 val response = fetchTimesUseCase.invoke()
@@ -55,11 +55,10 @@ class MainViewModel @Inject constructor(
                         return@let
                     }
 
-                    insertPrayersInDB(body.data)
+                    val list = body.data.map { it.toPrayer() }
+                    insertPrayersInDB(list)
+                    Timber.e(response.body().toString())
                 }
-
-                Timber.e("here")
-
 
             } catch (exception: IOException) {
                 Timber.e("IOException", exception)
@@ -69,10 +68,9 @@ class MainViewModel @Inject constructor(
         }
     }
 
-    private fun insertPrayersInDB(list: List<Data>){
+    private fun insertPrayersInDB(list: List<Prayer>) {
         viewModelScope.launch {
-            list.map { data ->
-                val prayer = data.toPrayer()
+            list.map { prayer ->
                 insertPrayerUseCase.invoke(prayer)
             }
         }

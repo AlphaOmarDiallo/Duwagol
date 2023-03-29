@@ -1,10 +1,10 @@
 package com.alphaomardiallo.duwagol.common.data.remote.prayerTimeCalendar
 
-import com.alphaomardiallo.duwagol.common.data.model.prayerTimesCalendar.ResponsePrayerTimeCalendar
+import com.alphaomardiallo.duwagol.common.data.model.prayerTimesCalendar.PrayerResponse
+import javax.annotation.Nullable
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
-import javax.annotation.Nullable
 
 /**
  * Web service to fetch prayer time for a location
@@ -22,7 +22,7 @@ interface PrayerTimesCalendarWS {
         @Query(SHAFAQ) shafaq: String,
         @Query(SCHOOL) school: String,
         @Query(MIDNHIGHT_MODE) midnightMode: Int,
-    ): Response<com.alphaomardiallo.duwagol.common.data.model.prayerTimesCalendar.ResponsePrayerTimeCalendar>
+    ): Response<PrayerResponse>
 
     companion object {
         const val URL = "v1/calendar"

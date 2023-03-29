@@ -33,8 +33,10 @@ class AladhanAPIModule {
     }.build()
 
     private val contentType = "application/json".toMediaType()
+    private val json = Json { ignoreUnknownKeys = true }
+
     @OptIn(ExperimentalSerializationApi::class)
-    private val converterFactory = Json.asConverterFactory(contentType)
+    private val converterFactory = json.asConverterFactory(contentType)
 
     @Singleton
     @Provides
