@@ -4,4 +4,8 @@
     <!-- Main navigation items -->
     <string name="main_nav_item_home">Home</string>
     <string name="main_nav_item_calendar">Home</string>
+
+    <!-- Main activity -->
+    <string name="main_activity_account_cd">Account circle</string>
+
 </resources>
