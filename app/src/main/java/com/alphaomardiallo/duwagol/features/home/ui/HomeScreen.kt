@@ -35,7 +35,6 @@ import com.alphaomardiallo.duwagol.common.ui.theme.blackOverlay
 
 @Composable
 fun HomeScreen() {
-
     Surface(modifier = Modifier
         .fillMaxSize()
         .padding(8.dp)
@@ -54,10 +53,12 @@ fun HomeScreen() {
     }
 }
 
-/////////////////////////////////////////////////////////////
-/////// Top Section
-/////////////////////////////////////////////////////////////
-
+/**
+ * Shows the hijri date of the day and holiday if there is one
+ *
+ * @param[date] to show the hijri date of the day
+ * @param[holidays] to show the holiday if there is one
+ */
 @Composable
 private fun DateSection(date: String, holidays: List<String>) {
     Card(
@@ -95,6 +96,9 @@ private fun DateSection(date: String, holidays: List<String>) {
     }
 }
 
+/**
+ * Shows the sunrise and sunset hours
+ */
 @Composable
 private fun SunCycle() {
     Box(modifier = Modifier.fillMaxWidth()) {
@@ -105,6 +109,12 @@ private fun SunCycle() {
     }
 }
 
+/**
+ * Show the sunset or sundown hours
+ *
+ * @param[sunrise] boolean set to true for sunrise and false for sunset
+ * @param[time] string displaying the time
+ */
 @Composable
 private fun SunCard(sunrise: Boolean, time: String) {
     Card(
@@ -137,6 +147,11 @@ private fun SunCard(sunrise: Boolean, time: String) {
     }
 }
 
+/**
+ * Creates the list with the prayers of the day
+ *
+ * @param[prayers] list that assemble all the prayers of the day
+ */
 @Composable
 private fun ListPrayers(prayers: List<UiPrayers>) {
     Column(
@@ -149,6 +164,12 @@ private fun ListPrayers(prayers: List<UiPrayers>) {
     }
 }
 
+/**
+ * Display the prayer name and time
+ *
+ * @param[prayer] Name of the prayer
+ * @param[time] Time of the prayer
+ */
 @Composable
 private fun Timings(prayer: String, time: String) {
     Card(modifier = Modifier.fillMaxWidth()) {
@@ -175,11 +196,17 @@ fun HomeScreenPreview() {
     }
 }
 
+/**
+ * MOCK CLASS
+ */
 data class UiPrayers(
     val name: String,
     val time: String,
 )
 
+/**
+ * MOCK DATA
+ */
 val list = mutableListOf(
     UiPrayers("Fajr", "04:33"),
     UiPrayers("Dhuhur", "04:33"),
