@@ -3,5 +3,9 @@
 
     <!-- Main navigation items -->
     <string name="main_nav_item_home">Home</string>
-    <string name="main_nav_item_calendar">Home</string>
+    <string name="main_nav_item_calendar">Calendar</string>
+
+    <!-- Main activity -->
+    <string name="main_activity_refresh_cd">Refresh</string>
+
 </resources>

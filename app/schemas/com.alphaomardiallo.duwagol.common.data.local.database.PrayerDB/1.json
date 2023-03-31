@@ -1,0 +1,100 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "0aaa998331c88a0de4a912badddf23ca",
+    "entities": [
+      {
+        "tableName": "prayer_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `gregorian_date` TEXT NOT NULL, `hijri_date` TEXT NOT NULL, `holidays` TEXT NOT NULL, `method_id` INTEGER NOT NULL, `method_name` TEXT NOT NULL, `prayer_fajr` TEXT NOT NULL, `prayer_dhuhr` TEXT NOT NULL, `prayer_asr` TEXT NOT NULL, `prayer_maghrib` TEXT NOT NULL, `prayer_isha` TEXT NOT NULL, `sunrise` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gregorianDate",
+            "columnName": "gregorian_date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hijriDate",
+            "columnName": "hijri_date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "holidays",
+            "columnName": "holidays",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "methodId",
+            "columnName": "method_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "methodName",
+            "columnName": "method_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Fajr",
+            "columnName": "prayer_fajr",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Dhuhr",
+            "columnName": "prayer_dhuhr",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Asr",
+            "columnName": "prayer_asr",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Maghrib",
+            "columnName": "prayer_maghrib",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Isha",
+            "columnName": "prayer_isha",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Sunrise",
+            "columnName": "sunrise",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0aaa998331c88a0de4a912badddf23ca')"
+    ]
+  }
+}
